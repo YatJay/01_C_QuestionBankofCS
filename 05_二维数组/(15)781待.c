@@ -16,7 +16,7 @@ int main(void)
 	
 	for(i=0;i<5;i++){
 		for(j=0;str[i][j]!='\0';j++){
-			if(a[i][j]>a[i+1][j]){
+			if(a[i][j]>a[i][j+1]){
 				
 			}
 		}

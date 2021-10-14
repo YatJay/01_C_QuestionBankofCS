@@ -5,9 +5,10 @@
 	4. 程序中不能使用库函数 isxdigit()、 sscanf() 或使用同名的变量、函数、单词。*/
 
 #include<stdio.h>
-
+#include<math.h> 
 /* User Code Begin(考生可在本行后添加代码，例如全局变量的定义、函数原型声明等，行数不限) */
-
+int isHex(char str[]);
+long int HexToDec(char str[]);
 
 
 /* User Code End(考生添加代码结束) */
@@ -22,8 +23,8 @@ int main(void)
 	gets(str);
 
 	/* User Code Begin(考生可在本行后添加代码，行数不限) */
-
-
+	flag=isHex(str);
+	if(flag==1) result10=HexToDec(str);
 
 	/* User Code End(考生添加代码结束) */
 
@@ -40,6 +41,31 @@ int main(void)
 }
 
 /* User Code Begin(考生在此后根据设计需要完成程序的其它部分，行数不限) */
+int isHex(char str[]){
+	int flag=0,i;
+	for(i=0;str[i]!='\0';i++){
+		if((str[i]>='a'&&str[i]<='f')||(str[i]>='A'&&str[i]<='F')||(str[i]>='0'&&str[i]<='9')){
+			flag=1;
+		}
+	}
+	return flag;
+}
+
+long int HexToDec(char str[]){
+	long int dec=0;
+	int i,j,count=0;
+	
+	for(i=0;str[i]!='\0';i++){
+		count++;
+	}
+	
+	for(i=count-1,j=0;i>=0;i--){
+			dec+=str[i]*pow(16,j);
+			j++;
+		}
+	
+	return dec;
+}
 
 
 
