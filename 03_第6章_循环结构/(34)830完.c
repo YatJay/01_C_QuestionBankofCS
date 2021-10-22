@@ -7,8 +7,11 @@ int main(void)
     printf("Please input m: ");
     scanf("%d",&m);
     
-    for(i=1;sum<=m;i++){
+    for(i=1;;i++){
     	sum+=i;
+    	if(sum>m){
+    		break;
+		} 
 	}
 	printf("maxium n = %d , sum = %d\n",i-1,sum-i);
     return 0;
