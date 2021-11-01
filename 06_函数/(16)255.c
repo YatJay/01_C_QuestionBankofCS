@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /* userCode(<70字符): 自定义函数之原型声明 */
-int posMaxSmaller(int array[],int n,int num);
+int posMinBigger(int array[],int n,int num);
 
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
 	printf("请再输入一个数：");
 	scanf("%d", &num);
 
-	posMaxSmaller(arrA,5,num);//______________________________  /* userCode(<50字符): 调用函数查找在arrA中大于num的最小数所在的下标 */
+	posMinBigger(arrA,5,num);//______________________________  /* userCode(<50字符): 调用函数查找在arrA中大于num的最小数所在的下标 */
 	if (-1 == minPosA)
 	{
 		printf("\narrA: not Find!");
@@ -27,7 +27,7 @@ int main(void)
 		printf("\nminPos(arrA) = %d", minPosA);
 	}
 
-	posMaxSmaller(arrB,8,num);//______________________________  /* userCode(<50字符): 调用函数查找在arrB中大于num的最小数所在的下标 */
+	posMinBigger(arrB,8,num);//______________________________  /* userCode(<50字符): 调用函数查找在arrB中大于num的最小数所在的下标 */
 	if (-1 == minPosB)
 	{
 		printf("\narrB: not Find!\n");
@@ -42,15 +42,23 @@ int main(void)
 
 /* User Code Begin：考生在此后完成自定义函数的设计，行数不限 */
 
-int posMaxSmaller(int array[],int n,int num){
-	int i,posMaxSmaller,maxSmaller,flag=0;
+int posMinBigger(int array[],int n,int num){
+	int i,posMinBigger,MinBigger,flag=0;
+	
+	MinBigger=num;
 	for(i=0;i<n;i++){
 		if(array[i]>num){
 			flag=1;
-			
+			if(array[i]>MinBigger){
+				MinBigger=array[i];
+				posMinBigger=i;
+			}
 		}
 	}
 	
-	return posMaxSmaller;
+	if(flag==0){
+		posMinBigger=-1;
+	}
+	return posMinBigger;
 }
 
