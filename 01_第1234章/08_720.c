@@ -7,9 +7,9 @@
 
 c语言中double类型数据的输入和输出————尽量用float，double类型输入输出B事情太多 
 double a;
-scanf("%f",&a);   //应该用scanf("%lf",&a);
+scanf("%f",&a); ------->应该用scanf("%lf",&a);
 执行上面语句时，发现double类型的输入不能使用%f进行输入，得用%lf才能正常得到a的值。
-而在输出double类型时却可以用%f，这是因为printf("%f",a);在执行时C自动将double型的参数转换成flaot型。
+而在输出double类型时却可以用%f，这是因为printf("%f",a);在执行时C自动将float型的参数转换成double型。
 故double型的输入输出形式如下：
 
 double a;

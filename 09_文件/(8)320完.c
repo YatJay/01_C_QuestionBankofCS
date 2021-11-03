@@ -17,7 +17,7 @@ int main(void)
     	exit(0);
 	}
 	
-	fscanf(fp,"%d %c %d",&a,&op,&b);
+	fscanf(fp,"%d %c %d",&a,&op,&b);  //%c在输入字符数据时，若格式控制字符串中无非格式字符，则认为所有输入的字符均为有效字符。空格会被当作字符赋值给变量。
 	switch(op){
 		case '+':
 			res=a+b;
