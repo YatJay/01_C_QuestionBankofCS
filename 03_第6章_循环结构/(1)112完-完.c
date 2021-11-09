@@ -14,7 +14,5 @@ int main(void)
     	year++;
 	}
 	printf("The year that output value will achieve is %d \n that time the output value is %.2f\n",year,y);
-	
-    
     return 0;
 }

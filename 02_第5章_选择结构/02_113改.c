@@ -7,7 +7,7 @@
 #include <stdio.h>
 int main(void)
 {
-    long capital;//题目要求考虑int很大情况，故使用long长整型 
+    long int capital;//题目要求考虑int很大情况，故使用long长整型 
     int term;
     float interest;
     

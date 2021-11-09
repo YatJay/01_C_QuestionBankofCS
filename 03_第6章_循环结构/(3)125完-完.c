@@ -9,7 +9,6 @@ int main(void)
 	end=getchar();
 	for(i=begin;i>=end;i--){
 		printf("%c ",i);
-	} 
-    
+	}   
     return 0;
 }
