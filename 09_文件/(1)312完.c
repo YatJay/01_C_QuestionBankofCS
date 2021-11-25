@@ -32,9 +32,9 @@ int main(void)
 
 	while(!feof(fp)){
 		if (fread(store_sp, 20, 1, fp)== 1 
-		&& fread(specification, 12, 1, fp) == 1 
-		&& fread(&sum, sizeof(long), 1, fp) == 1 
-		&&fread(&unit_price, sizeof(float), 1, fp)==1){
+			&& fread(specification, 12, 1, fp) == 1 
+			&& fread(&sum, sizeof(long), 1, fp) == 1 
+			&&fread(&unit_price, sizeof(float), 1, fp)==1){
 			if (strcmp(search_sp, store_sp) == 0)
 			{
 				printf("%s,%s,%ld,%.2f\n", store_sp, specification, sum, unit_price);
