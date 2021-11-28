@@ -32,7 +32,7 @@ int main(void)
 	//将二维字符数组视为一维数组，数组元素为字符串，进行冒泡排序 
 	for(j=1;j<=5-1;j++){  //排序需要进行n-1轮 
 		for(i=0;i<=5-j-1;i++){  //每一轮需要从第0元素到第n-j-1元素 
-			if(strcmp(str[i],str[i+1])>0){
+			if(strcmp(str[i],str[i+1])>0){  //二者之差大于0说明前一个字符串更大时调整位置
 				strcpy(temp,str[i]);     //字符数组不能整体赋值，需借助函数strcpy()进行整体赋值 
 				strcpy(str[i],str[i+1]);
 				strcpy(str[i+1],temp);
