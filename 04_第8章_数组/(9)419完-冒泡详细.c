@@ -22,7 +22,7 @@ int main(void)
 	//冒泡排序 
 	printf("Result: ");
 	for(i=0;i<=count-1;i++){  //对于N个元素，只需要进行N-1次循环即排序完成
-		for(j=0;j<count-i-1;j++){  ////最后i个元素已经有序，不需要参与比较
+		for(j=0;j<count-i-1;j++){  //最后i个元素已经有序，不需要参与比较
 			if(a[j]>a[j+1]){
 				t=a[j];
 				a[j]=a[j+1];
